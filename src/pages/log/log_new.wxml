@@ -1,0 +1,29 @@
+<!--pages/log/log_new.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="title">选择要添加的记录类型</view>
+        <view class="log_list">
+            <navigator url="bridge/bridge_edit" class="log_item top">
+                <image class="log_img" src="../../style/images/log/icon_bridge.png" mode="widthFix" />
+                <view class="log_name">桥架安装记录</view>
+            </navigator>
+
+            <navigator url="tubing/tubing_edit" class="log_item right top">
+                <image class="log_img" src="../../style/images/log/icon_tubing.png" mode="widthFix" />
+                <view class="log_name">敷管记录</view>
+            </navigator>
+
+            <navigator url="equipment/equipment_edit" class="log_item">
+                <image class="log_img" src="../../style/images/log/icon_equipment.png" mode="widthFix" />
+                <view class="log_name">设备安装记录</view>
+            </navigator>
+
+            <navigator url="wiring/wiring_edit" class="log_item right">
+                <image class="log_img" src="../../style/images/log/icon_wiring.png" mode="widthFix" />
+                <view class="log_name">敷线和接线记录</view>
+            </navigator>
+
+            <view class="clear"></view>
+        </view>
+    </view>
+</view>

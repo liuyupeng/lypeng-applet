@@ -1,0 +1,8 @@
+<!--pages/notice/notice_table.wxml-->
+<view class="weui-panel__hd">{{type_text}}说明</view>
+<view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_text" wx:for="{{list}}" wx:key="id">
+        <view class="weui-media-box__title weui-media-box__title_in-text">{{index + 1}}.{{item.name}}</view>
+        <view class="weui-media-box__desc">{{item.context}}</view>
+    </view>
+</view>

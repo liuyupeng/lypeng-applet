@@ -1,0 +1,68 @@
+/**index.wxss**/
+.search_box {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search_box .search_item {
+    background: #EEEEEE;
+    border-radius: 3px;
+}
+
+.search_box .picker_user {
+    margin-bottom: 10px;
+}
+
+.search_box .picker_user .weui-select{
+    border: none;
+    text-align: center;
+}
+
+.search_box .picker_date {
+    display: flex;
+    padding: 6px;
+}
+
+.search_box .picker_date .delimiter{
+    width: 20%;
+    text-align: center;
+}
+
+.search_box .picker_date picker {
+    width: 40%;
+    text-align: center;
+    background: #FFF;
+    padding: 15rpx;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.fengexian {
+    width: 60px;
+}
+
+.daily_week {
+    padding-left: 12px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+.weui-media-box__info {
+    color: #666;
+}
+
+.btn_plus {
+    z-index: 10000;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 46px;
+    height: 46px;
+}
+
+.btn_plus .plus_image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}

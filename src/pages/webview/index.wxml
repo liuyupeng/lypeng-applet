@@ -1,0 +1,3 @@
+<!--pages/webview/index.wxml-->
+<!-- <text>pages/webview/index.wxml</text> -->
+<web-view bindmessage="bindWebIndex" src="https://daily.pumintech.com/admini/web/index"></web-view>

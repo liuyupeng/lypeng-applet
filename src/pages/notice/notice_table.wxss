@@ -1,0 +1,5 @@
+/* pages/notice/notice_table.wxss */
+.weui-media-box__desc {
+    line-height: 1.5;
+    text-indent: 14px;
+}

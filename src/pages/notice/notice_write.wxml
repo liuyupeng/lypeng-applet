@@ -1,0 +1,53 @@
+<!--pages/notice/notice_write.wxml-->
+
+<view class="weui-panel__hd">日报填写说明</view>
+<view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">1.完善资料</view>
+        <view class="weui-media-box__desc">使用前请先完善自己的资料，填写正确的工号、姓名、手机号、专业组信息。</view>
+    </view>
+    <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">2.日期</view>
+        <view class="weui-media-box__desc">填写正确的日期，每天可以有多行记录。系统将根据你填写的日期生成周次。</view>
+    </view>
+
+    <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">3.项目</view>
+        <view class="weui-media-box__desc">正确填写工作所属的项目，不属于任何一个项目填写N/A。</view>
+    </view>
+
+    <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">4.类别</view>
+        <view class="weui-media-box__desc">类别指的是工作类别，具体参见工作类别说明。</view>
+    </view>
+
+    <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">5.工时</view>
+        <view class="weui-media-box__desc">精确到小时即可。</view>
+    </view>
+
+    <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">6.简述</view>
+        <view class="weui-media-box__desc">
+            <view>简单描述工作内容，要比工作类别更加具体。</view>
+            <view>举例说明：</view>
+            <view>错误的简述：界面开发。</view>
+            <view>正确的说明：模块加载功能接口调试。</view>
+        </view>
+    </view>
+
+    <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">7.问题</view>
+        <view class="weui-media-box__desc">
+            <view>如果在某项工作内容中碰到了需要跨专业组、跨部门解决的问题，请列述在这个单元格内。</view>
+            <view>举例说明：</view>
+            <view>需工厂间帮忙加班做板子。</view>
+            <view>需维保部反馈XX功能使用结果。</view>
+        </view>
+    </view>
+
+    <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">8.备注</view>
+        <view class="weui-media-box__desc">备注信息。</view>
+    </view>
+</view>

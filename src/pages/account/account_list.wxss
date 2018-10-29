@@ -1,0 +1,15 @@
+/* pages/account/account_list.wxss */
+.weui-media-box__title .wx_nickname {
+    font-size: 13px;
+    color: #666;
+}
+
+.weui-media-box__desc {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #555;
+}
+
+/* .weui-media-box__thumb {
+    border-radius: 50%;
+} */

@@ -1,0 +1,73 @@
+/* pages/log/wiring/wiring_edit.wxss */
+
+
+.red {
+    color: red;
+}
+
+.tip_text {
+    color: #808080; 
+}
+
+.border-line {
+    position: relative;
+}
+
+.border-line:before {
+    content:" ";
+    position: absolute;
+    top:0;
+    right:0;
+    left: 0;
+    height:1px;
+    border-top:1rpx solid #d9d9d9;
+    color:#d9d9d9;
+}
+
+page {
+    background: #eee;
+}
+
+picker.day {
+    padding: 10px 0;
+}
+
+input, picker, textarea {
+    font-size: 16px;
+}
+
+.weui-label {
+    font-size: 15px;
+    color: #333;
+}
+
+.weui-select {
+    border-right: 0;
+}
+
+.weui-btn-area {
+    padding-bottom: 15px;
+}
+
+.weui-btn-area .weui-btn {
+    background: #a7292a;
+    font-size: 16px;
+    color: #fff;
+}
+
+.weui-btn-area .weui-btn[disabled] {
+    background: #a7292a;
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.6;
+}
+
+textarea {
+    height: 60px;
+    padding: 8px 0;
+}
+
+.weui-cell__hd .weui-label {
+     text-align: right;
+     padding-right: 15px; 
+}

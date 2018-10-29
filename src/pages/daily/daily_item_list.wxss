@@ -1,0 +1,34 @@
+/* pages/daily/daily_item_list.wxss */
+
+.page {
+    padding-bottom: 50px;
+}
+
+.page__hd {
+    padding: 15px;
+}
+
+.weui-media-box__desc {
+    color: #666;
+}
+
+.weui-media-box__info {
+    color: #666;
+}
+
+.daily_week {
+    padding-left: 12px;
+    font-size: 14px;
+    color: #666;
+}
+
+.btn_add {
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 3px 0;
+    background: #A7292A;
+    border-radius: 0;
+    position: fixed;
+    bottom: 0px;
+}

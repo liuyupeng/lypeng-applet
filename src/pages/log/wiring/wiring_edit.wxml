@@ -1,0 +1,153 @@
+<!--pages/log/wiring/wiring_edit.wxml-->
+
+<view class="page">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{topTipText}}">{{topTipText}}</view>
+    <view class="page__bd">
+        <form bindsubmit="bindFormSubmit">
+              <view class="weui-cells__title">编辑桥架安装记录数据</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label"><span class="red">*</span> 项目：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker bindchange="bindProjectChange" value="{{projectIndex}}" range="{{projectNameList}}">
+                             <view class="weui-select weui-select_in-select-after" wx:if="{{projectNameList.length}}">{{projectNameList[projectIndex]}}</view>
+                             <view class="weui-select weui-select_in-select-after tip_text" wx:else>必选</view> 
+                        </picker>
+                    </view>
+                </view>
+                
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label"><span class="red">*</span> 层面：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="floor" placeholder="必填" />
+                    </view>
+                </view>
+
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label"><span class="red">*</span> 控制点：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="control" placeholder="必填" />
+                    </view>
+                </view>
+
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label"><span class="red">*</span> 敷线位置：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="loc_begin" placeholder="起始端 必填" />
+                        <view class="border-line"></view>
+                        <input class="weui-input" name="loc_end" placeholder="结束端 必填" />
+                    </view>
+                </view>
+            
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label"><span class="red">*</span> 规格型号：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="spec_name" placeholder="必填" />
+                    </view>
+                </view>
+
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label"><span class="red">*</span> 线缆用途：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker bindchange="bindCableUseChange" value="{{cableIndex}}" range="{{cableUseList}}">
+                             <view class="weui-select weui-select_in-select-after" wx:if="{{cableUseList.length}}">{{cableUseList[cableIndex]}}</view>
+                             <view class="weui-select weui-select_in-select-after tip_text" wx:else>必选</view> 
+                        </picker>
+                    </view>
+                </view>
+
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label"><span class="red">*</span> 敷设日期：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker class="day" mode="date" name="lay_date" value="{{lay_date}}" bindchange="bindLayDateChange">
+                            <view class="picker" wx:if="{{lay_date}}">{{lay_date}}</view>
+                            <view class="picker tip_text" wx:else>必选</view>
+                        </picker>
+                    </view>
+                </view>
+                
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label"><span class="red">*</span> 敷设数量：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input type="digit" class="weui-input" name="lay_meters" placeholder="必填" />
+                    </view>
+                </view>
+
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label"><span class="red">*</span> 敷设人员：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input type="number" class="weui-input" name="lay_user" placeholder="必填" value="{{userInfo.username}}" />
+                    </view>
+                </view>
+
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label"><span class="red">*</span> 敷设状况：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker bindchange="bindLayStateChange" value="{{layIndex}}" range="{{layStateList}}">
+                             <view class="weui-select weui-select_in-select-after" wx:if="{{layStateList.length}}">{{layStateList[layIndex]}}</view>
+                             <view class="weui-select weui-select_in-select-after tip_text" wx:else>必选</view>
+                        </picker>
+                    </view>
+                </view>
+
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label"><span class="red">*</span> 测试状况：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker bindchange="bindTestStateChange" value="{{testIndex}}" range="{{testStateList}}">
+                            <view class="weui-select weui-select_in-select-after" wx:if="{{testStateList.length}}">{{testStateList[testIndex]}}</view>
+                             <view class="weui-select weui-select_in-select-after tip_text" wx:else>必选</view>
+                        </picker>
+                    </view>
+                </view>
+
+                <view class="weui-cell weui-cell_select">
+                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                        <view class="weui-label">测试日期：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker class="day" mode="date" name="test_date" value="{{test_date}}" bindchange="bindTestDateChange">
+                            <view class="picker" wx:if="{{test_date}}">{{test_date}}</view>
+                            <view class="picker tip_text" wx:else>默认为敷设日期</view>
+                        </picker>
+                    </view>
+                </view>
+
+                 <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">备注：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                         <textarea class="weui-textarea" name="remark" placeholder="选填" /> 
+                    </view>
+                </view>
+            </view>
+
+            <view class="weui-btn-area">
+                <button class="weui-btn" disabled wx:if="{{btn_disabled}}">确定</button>
+                <button class="weui-btn" formType="submit" wx:else>确定</button>
+            </view>
+        </form>
+    </view>
+</view>

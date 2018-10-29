@@ -1,0 +1,62 @@
+{
+    "debug": false,
+    "pages": [
+        "pages/index/index",
+        "pages/index/personal",
+        "pages/daily/daily_list",
+        "pages/daily/daily_item_list",
+        "pages/daily/daily_item_info",
+        "pages/daily/daily_edit",
+        "pages/account/account_list",
+        "pages/account/account_info",
+        "pages/account/account_auth",
+        "pages/notice/notice_write",
+        "pages/notice/notice_table",
+        "pages/message/message",
+        "pages/webview/index",
+        "pages/log/log",
+        "pages/log/log_new",
+        "pages/log/bridge/bridge_edit",
+        "pages/log/tubing/tubing_edit",
+        "pages/log/wiring/wiring_edit",
+        "pages/log/equipment/equipment_edit",
+        "pages/auth/auth"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#A7292A",
+        "navigationBarTitleText": "天天爱汇报",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": false
+    },
+    "tabBar":{
+        "color": "#333333",
+        "selectedColor": "#A7292A",
+        "borderStyle": "#F2F2F2",
+        "backgroundColor": "#ffffff",
+        "list":[{
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "style/images/icon_home.png",
+            "selectedIconPath": "style/images/icon_home_selected.png"
+        },
+        {
+            "pagePath": "pages/account/account_list",
+            "text": "用户",
+            "iconPath": "style/images/icon_user.png",
+            "selectedIconPath": "style/images/icon_user_selected.png"
+        },
+        {
+            "pagePath": "pages/log/log_new",
+            "text": "记录",
+            "iconPath": "style/images/icon_log.png",
+            "selectedIconPath": "style/images/icon_log_selected.png"
+        },
+        {
+            "pagePath": "pages/index/personal",
+            "text": "个人中心",
+            "iconPath": "style/images/icon_personal.png",
+            "selectedIconPath": "style/images/icon_personal_selected.png"
+        }]
+    }
+}

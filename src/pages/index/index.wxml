@@ -1,0 +1,58 @@
+<!--index.wxml-->
+
+<view class="search_box">
+    <view class="search_item picker_user" wx:if="{{userInfo.is_manager}}">
+        <picker bindchange="bindUserChange" value="{{userIndex}}" range="{{userList}}">
+            <view class="weui-select weui-select_in-select-after">{{userList[userIndex]}}</view>
+        </picker>
+    </view>
+
+    <view class="search_item picker_date">
+        <picker class="date_begin" mode="date" value="{{date_begin}}" bindchange="bindBeginDateChange">
+            <view class="picker" wx:if="{{date_begin}}">{{date_begin}}</view>
+            <view class="picker" wx:else>开始日期</view>
+        </picker>
+
+        <view class="delimiter"> - </view>
+
+        <picker class="date_end" mode="date" value="{{date_end}}" bindchange="bindEndDateChange">
+            <view class="picker" wx:if="{{date_end}}">{{date_end}}</view>
+            <view class="picker" wx:else>结束日期</view>
+        </picker>
+    </view>
+</view>
+
+<view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">按日期倒叙显示日报</view>
+    <view class="weui-panel__bd">
+        <navigator url="../daily/daily_item_list?daily_id={{item.id}}" class="weui-media-box weui-media-box_text" wx:for="{{list}}" wx:key="id">
+           
+            <view class="weui-media-box__title weui-media-box__title_in-text">
+                <text class="daily_day">{{item.day}}</text>
+                <text class="daily_week">第{{item.week}}周</text>
+                <text class="daily_week">{{item.week_day}}</text>
+            </view>
+
+            <view class="weui-media-box__info">
+                <view class="weui-media-box__info__meta">{{item.userInfo.username}}</view>
+                <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">共{{item.items}}项</view>
+                <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.dateline}}</view>
+            </view>
+        </navigator>
+    </view>
+</view>
+
+<view class="page__fd">
+    <view class="weui-loadmore" wx:if="{{is_loading}}">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+
+    <view class="weui-loadmore weui-loadmore_line" wx:if="{{is_show_text}}">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">{{text_msg}}</view>
+    </view>
+</view>
+
+<navigator class="btn_plus" url="../daily/daily_edit">
+    <image class="plus_image" src="../../style/images/icon_plus_selected.png" background-size="cover"></image>
+</navigator>
